@@ -64,7 +64,7 @@ void standingMODE(int k) {
   double dbetaLeg = acos(tmp);
   double dbetaKnee = acos((k*fnormalHeight - flengthBodyLeg*tmp)/flengthLegKnee) + dbetaLeg;
 
-  // body servos leave untouched
+  // body servos are leaved untouched
   for (int i = 0; i < LegsNum; i++) {
     servos[i][1].write(dbetaLeg);
     servos[i][2].write(dbetaKnee);
